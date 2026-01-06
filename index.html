@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas</title>
+    <!-- conectar hoja de estilos -->
+    <link rel="stylesheet" href="style.css">
+    <!-- conectar hoja de script -->
+    <script src="./script.js" defer></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- iconos boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- favicon -->
+    <link rel="icon" href="./favicon2.png" type="image/png">
+
+</head>
+<body>
+    <div class="contenedor">
+       <h1 class="titulo">✅ Lista de tareas</h1>
+       <p class="mensaje">Escribe tu proxima tarea</p>
+       <input 
+            type="text" 
+            class="tarea-entrada" 
+            placeholder="Hacer la tarea de..."/>
+
+        <div class="contenedor-botones">
+            <button class="boton boton-agregar">Crear tarea</button>
+            <button class="boton boton-ocultar">Ocultar completadas</button>
+            <button class="boton boton-eliminar">Eliminar completadas</button>
+        </div>
+    
+        <div class="conteo-conteo">
+            <p>Tareas totales: <span class="tareas-totales">0</span></p>
+            <p>Tareas terminadas: <span class="tareas-terminadas">0</span></p>
+        </div>
+
+        <div class="contenedor-tareas">
+
+            <!-- tarea 1 -->
+            <div class="tarea">
+                <p class="tarea-texto">Tarea 1:Estudiar para el examen de animación 😣</p>
+                <div class="tarea-iconos">
+                    <i class="bi bi-check-circle"></i>
+                    <i class="bi bi-trash2"></i>
+                </div>
+            </div>
+
+            <!-- estructura tarea 2 completada -->
+            <div class="tarea tarea-completada">
+                <p class="tarea-texto">tarea 2:Hacer proyecto de videojuegos 🥱</p>
+                <div class="tarea-iconos">
+                    <i class="bi bi-dash-circle"></i>
+                    <i class="bi bi-trash2"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
