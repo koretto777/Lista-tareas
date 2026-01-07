@@ -1,7 +1,75 @@
 * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* propiedades personalizadas  */
+
+:root {
+    /* Colores de contenedor principales */
+    --bg-body: #907761;
+    --bg-contenedor: #fff9e1;
+
+    /* colores textos */
+    --text-primary: #291c0e;
+    --text-secundary: #34251b;
+
+    /* espacios */
+    --space-l: 1rem;
+    --space-n: .8rem;
+    --space-s: .5rem;
+
+    /* bordes */
+    --border-radius: 4px;
+    --border-size: 2px;
+    --border-contenedor: #7e634e;
 
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    padding: var(--space-l);
+    background-color: var(--bg-body);
+}
 
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-l);
+
+    width: 100%;
+    max-width: 640px;
+    height: fit-content;
+
+    padding: var(--space-n);
+
+    border-width: var(--border-size);
+    border-color: var(--border-contenedor);
+    border-style: solid;
+    border-radius: var(--border-radius);
+
+    background-color: var(--bg-contenedor);
+}
+
+.titulo {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+}
+
+.mensaje {
+    font-size: 1rem;
+    color: var(--text-secundary);
+}
+
+.tarea-entrada {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: var(--space-l);
+    border-radius: var(--border-radius);
+    border: none;
 }
