@@ -8,12 +8,26 @@
 
 :root {
     /* Colores de contenedor principales */
-    --bg-body: #907761;
-    --bg-contenedor: #fff9e1;
+    --bg-body: #583d25;
+    --bg-contenedor: #ffe5c0;
+    --bg-container-counter: rgb(231, 183, 120);
+    --bg-task: #d0af87;
+    --bg-task-complete: #9c8466;
 
     /* colores textos */
     --text-primary: #291c0e;
     --text-secundary: #34251b;
+    --text-counter: #a5521a;
+
+    /* colores botones */
+    --btn-add-color: #d29857;
+    --btn-hide-color: #ac7d47;
+    --btn-remove-color: #815e36;
+    --btn-add-color-hover: #ac7d47;
+    --btn-hide-color-hover: #815e36;
+    --btn-remove-color-hover: #563f25;
+    --btn-text-color: #000000;
+    --btn-text-color-hover: #fbfafa;
 
     /* espacios */
     --space-l: 1rem;
@@ -24,6 +38,10 @@
     --border-radius: 4px;
     --border-size: 2px;
     --border-contenedor: #7e634e;
+
+    /* iconos */
+    --icon-color: #322214;
+    --icon-color-hover: #fdf4ea;
 
 }
 
@@ -73,3 +91,114 @@ body {
     border-radius: var(--border-radius);
     border: none;
 }
+
+.contenedor-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-n);
+    width: 100%;
+}
+
+.boton {
+    color: var(--btn-text-color);
+    padding: var(--space-s) var(--space-n);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: .9rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.boton:hover {
+    color: var(--btn-text-color-hover);
+}
+
+.boton-agregar {
+    background-color: var(--btn-add-color);
+}
+
+.boton-agregar:hover {
+    background-color: var(--btn-add-color-hover);
+}
+
+.boton-ocultar {
+    background-color: var(--btn-hide-color);
+}
+
+.boton-ocultar:hover {
+    background-color: var(--btn-hide-color-hover);
+}
+
+.boton-eliminar {
+    background-color: var(--btn-remove-color);
+}
+
+.boton-eliminar:hover {
+    background-color: var(--btn-remove-color-hover);
+}
+
+.conteo-conteo {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-n);
+    padding: var(--space-n);
+    background-color: var(--bg-container-counter); 
+    border: 1px solid var(--border-contenedor);
+    border-radius: var(--border-radius);
+}
+
+.contenedro-conteo p {
+    color: var(--text-counter);
+    font-size: .95rem;
+}
+
+.tareas-totales
+.tareas-terminadas {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.contenedor-tareas {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+    width: 100%;
+}
+
+.tarea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-n);
+    padding: var(--space-s) var(--space-n);
+    border-radius: var(--border-radius);
+    background-color: var(--bg-task);
+}
+
+.tarea-texto {
+    flex-grow: 1;
+}
+
+.tarea-iconos {
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    display: flex;
+    gap: var(--space-n);
+}
+
+.tarea-iconos i {
+    font-size: 1.4rem;
+    color: var(--icon-color);
+    cursor: pointer;
+}
+
+.tarea-iconos i:hover {
+    color: var(--icon-color-hover);
+}
+
+.tarea-completada {
+    background-color: var(--bg-task-complete);
+}
+
+
