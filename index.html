@@ -25,10 +25,11 @@
        <input 
             type="text" 
             class="tarea-entrada" 
+            id="tareaEntrada"
             placeholder="Hacer la tarea de..."/>
 
         <div class="contenedor-botones">
-            <button class="boton boton-agregar">Crear tarea</button>
+            <button class="boton boton-agregar" id="botonAgregar">Crear tarea</button>
             <button class="boton boton-ocultar">Ocultar completadas</button>
             <button class="boton boton-eliminar">Eliminar completadas</button>
         </div>
@@ -38,7 +39,7 @@
             <p>Tareas terminadas: <span class="tareas-terminadas">0</span></p>
         </div>
 
-        <div class="contenedor-tareas">
+        <div class="contenedor-tareas" id="contenedorTareas">
 
             <!-- tarea 1 -->
             <div class="tarea">
