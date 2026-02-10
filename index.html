@@ -21,7 +21,7 @@
 <body>
     <div class="contenedor">
        <h1 class="titulo">✅ Lista de tareas</h1>
-       <p class="mensaje">Escribe tu proxima tarea</p>
+       <p class="mensaje" id="mensaje">Escribe tu proxima tarea</p>
        <input 
             type="text" 
             class="tarea-entrada" 
@@ -30,35 +30,16 @@
 
         <div class="contenedor-botones">
             <button class="boton boton-agregar" id="botonAgregar">Crear tarea</button>
-            <button class="boton boton-ocultar">Ocultar completadas</button>
-            <button class="boton boton-eliminar">Eliminar completadas</button>
+            <button class="boton boton-ocultar" id="botonOcultar">Ocultar completadas</button>
+            <button class="boton boton-eliminar" id="botonEliminar">Eliminar completadas</button>
         </div>
     
         <div class="conteo-conteo">
-            <p>Tareas totales: <span class="tareas-totales">0</span></p>
-            <p>Tareas terminadas: <span class="tareas-terminadas">0</span></p>
+            <p>Tareas totales: <span class="tareas-totales" id="contadorTotales">0</span></p>
+            <p>Tareas terminadas: <span class="tareas-terminadas" id="contadorTerminadas">0</span></p>
         </div>
 
-        <div class="contenedor-tareas" id="contenedorTareas">
-
-            <!-- tarea 1 -->
-            <div class="tarea">
-                <p class="tarea-texto">Tarea 1: Estudiar para el examen de animación 😣</p>
-                <div class="tarea-iconos">
-                    <i class="bi bi-check-circle"></i>
-                    <i class="bi bi-trash2"></i>
-                </div>
-            </div>
-
-            <!-- estructura tarea 2 completada -->
-            <div class="tarea tarea-completada">
-                <p class="tarea-texto">Tarea 2: Hacer proyecto de videojuegos 🥱</p>
-                <div class="tarea-iconos">
-                    <i class="bi bi-dash-circle"></i>
-                    <i class="bi bi-trash2"></i>
-                </div>
-            </div>
-        </div>
+        <div class="contenedor-tareas" id="contenedorTareas"></div>
     </div>
 </body>
 </html>
